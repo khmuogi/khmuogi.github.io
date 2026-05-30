@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>일본 여행 가이드</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:"맑은 고딕","돋움";
+    background-color:#ffffff;
+    color:#333333;
+}
+
+header{
+    height:130px;
+    border-bottom:1px solid #dddddd;
+    background-color:white;
+}
+
+#top_wrap {
+    width: 100%;
+    max-width: 1300px; 
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+#logo{
+    float:left;
+}
+
+#logo h1{
+    color:#d32f2f;
+    font-size:48px;
+}
+
+#logo p{
+    color:#777777;
+    font-size:15px;
+}
+
+nav{
+    float:left;
+    margin-left:80px;
+    margin-top:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#222222;
+    font-size:18px;
+    font-weight:bold;
+    margin-right:35px;
+}
+
+nav a:hover{
+    color:#d32f2f;
+}
+
+#search{
+    float:right;
+    margin-top:22px;
+    font-size:18px;
+}
+
+#search input{
+    width:170px;
+    height:30px;
+}
+
+#map_area{
+    clear:both;
+    background-color:#EBEBEB;
+    padding:40px 50px;
+}
+
+#map_area h2{
+    font-size:36px;
+    max-width: 1300px;
+    margin: 0 auto 40px auto;
+}
+
+#map_wrap{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:flex-start;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.left_area{
+    width:260px;
+}
+
+.center_area{
+    flex:1;
+    min-width:500px;
+    text-align:center;
+    padding-top:20px;
+}
+
+.right_area{
+    width:260px;
+}
+
+.right_area .region_card{
+    margin-left:auto;
+}
+
+#map_img{
+    width:100%;
+    max-width:1000px;
+    height:auto;
+}
+
+.region_card{
+    width:240px;
+    min-height:210px;
+    background-color:#222222;
+    color:white;
+    margin-bottom:40px;
+    overflow:hidden;
+}
+
+.region_card img{
+    width:100%;
+    height:90px;
+    object-fit:cover;
+    display:block;
+}
+
+.region_card h3{
+    padding:12px 15px 8px 15px;
+    font-size:22px;
+}
+
+.region_card p{
+    padding:0 15px 15px 15px;
+    font-size:14px;
+    line-height:26px;
+}
+ul{
+    list-style-type:none;
+}
+
+#festival_list{
+    clear:both;
+    background-color:#ffffff;
+    padding:45px 50px;
+}
+#main_title{
+    font-size:32px;
+    padding-bottom:15px;
+    margin-bottom:40px;
+    border-bottom:solid 2px #aaaaaa;
+}
+
+.list_item{
+    width:1000px;
+    margin:0 auto;
+    padding:25px 0;
+    text-align:center;
+}
+.festival_title{
+    color:#d32f2f;
+    font-size:26px;
+    margin-bottom:20px;
+}
+
+.festival_img img{
+    width:900px;
+    height:320px;
+    object-fit:cover;
+}
+
+.festival_text{
+    width:850px;
+    margin:20px auto 0 auto;
+    font-size:16px;
+    line-height:28px;
+}
+
+.info{
+    margin-top:25px;
+    text-align:center;
+}
+.info li.red{
+    color:#d32f2f;
+    font-weight:bold;
+    font-size:18px;
+    margin-top:20px;
+}
+.info li.small{
+    margin-top:8px;
+    font-size:15px;
+}
+
+.line{
+    width:1000px;
+    margin:0 auto;
+    border-top:solid 1px #cccccc;
+}
+
+footer{
+    clear:both;
+    background-color:#333333;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
+}
+
+@media only screen and (max-width: 1150px) {
+
+    header {
+        height: auto;
+        padding: 20px 15px;
+    }
+
+    #top_wrap {
+        padding-top: 0;
+        text-align: center;
+    }
+
+    #logo, nav, #search {
+        float: none;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 15px;
+    }
+
+    nav a {
+        margin-right: 0;
+        font-size: 16px;
+    }
+
+    #search {
+        margin-top: 15px;
+    }
+    
+    #search input {
+        width: 80%;
+        max-width: 250px;
+    }
+
+    #map_area {
+        padding: 30px 15px;
+    }
+
+    #map_area h2 {
+        font-size: 36px;
+        text-align: center;
+        margin: 0 auto 25px auto;
+    }
+
+    #map_wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left_area,
+    .right_area {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .center_area {
+        width: 100%;
+        min-width: 0;
+        text-align: center;
+        padding-top: 0;
+        margin: 20px auto;
+    }
+
+    .region_card {
+        width: 100%;
+        max-width: 280px;
+        min-height: 0;
+        margin: 0 !important;
+    }
+
+    .region_card img {
+        width: 100%;
+        height: 140px;
+    }
+
+    #map_img {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    #festival_list {
+        padding: 30px 15px;
+    }
+
+    #main_title {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .list_item {
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .festival_title {
+        font-size: 20px;
+    }
+
+    .festival_img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .festival_text {
+        width: 100%;
+        font-size: 15px;
+        line-height: 26px;
+        text-align: justify;
+        padding: 0 5px;
+    }
+
+    .line {
+        width: 100%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div id="top_wrap">
+
+    <div id="logo">
+        <h1>Japan Travel</h1>
+        <p>일본 여행 가이드</p>
+    </div>
+
+    <nav>
+        <a href="index.html">추천 먹거리</a>
+        <a href="index2.html">계절별 축제</a>
+        <a href="index3.html">도시별 관광지</a>
+        <a href="index4.html">숙박 시설</a>
+        <a href="index5.html">교통 안내</a>
+    </nav>
+
+    <div id="search">
+        Search <input type="text">
+    </div>
+
+</div>
+
+</header>
+
+<section id="map_area">
+
+<h2>일본지도</h2>
+
+<div id="map_wrap">
+
+<div class="left_area">
+
+    <div class="region_card">
+        <img src="img/kyoto.jpg">
+        <h3>교토</h3>
+        <p>천년의 세월을 담은 고즈넉한 사찰과 전통 가옥 거리로 가장 일본스러운 정취를 품은 곳입니다.</p>
+    </div>
+
+    <div class="region_card">
+        <img src="img/osaka.jpg">
+        <h3>오사카</h3>
+        <p>활기찬 에너지와 유쾌한 상인 정신, 맛있는 길거리 음식이 가득한 미식 도시입니다.</p>
+    </div>
+
+    <div class="region_card">
+        <img src="img/fukuoka.jpg">
+        <h3>후쿠오카</h3>
+        <p>한국에서 가장 가깝고 공항 접근성이 좋아 부담 없이 먹방을 즐기기 좋은 힐링 도시입니다.</p>
+    </div>
+
+</div>
+
+<div class="center_area">
+
+    <img id="map_img" src="img/japan_map.png">
+
+</div>
+
+<div class="right_area">
+
+    <div class="region_card">
+        <img src="img/sapporo.jpg">
+        <h3>삿포로</h3>
+        <p>겨울의 낭만적인 눈 풍경과 시원한 맥주, 싱싱한 해산물이 매력적인 북방의 천국입니다.</p>
+    </div>
+
+    <div class="region_card">
+        <img src="img/tokyo.jpg">
+        <h3>도쿄</h3>
+        <p>화려한 빌딩 숲과 첨단 트렌드, 전통이 공존하는 일본의 역동적인 수도입니다.</p>
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="festival_list">
+
+<h2 id="main_title">일본 계절별 대표 축제</h2>
+
+<div class="list_item">
+
+    <h3 class="festival_title">봄 : 아오모리 히로사키 벚꽃 축제</h3>
+
+    <div class="festival_img">
+        <img src="img/spring.jpg">
+    </div>
+
+    <div class="festival_text">
+        히로사키 벚꽃 축제는 일본 아오모리현 히로사키시의 히로사키 공원에서 매년 봄에 열리는 축제입니다. 이 축제는 히로사키 공원 내의 벚꽃을 중심으로 하며, 히로사키 공원은 일본에서 몇 안 남은 에도 시대 성곽 중 하나인 히로사키성을 포함하는 옛 성곽 공원입니다. 이곳은 나무의 밀도, 다양성, 그리고 전문적인 원예 관리 덕분에 일본 최고의 벚꽃 명소 중 하나로 널리 알려져 있습니다.
+        이것은 히로사키의 4대 축제 중 하나입니다. 나머지 4대 축제는 히로사키 네푸타 축제, 히로사키 성 국화 및 단풍 축제, 히로사키 성 눈등 축제입니다. 또한 벚꽃 축제 직후에 매년 히로사키 사과 공원에서 히로사키 사과꽃 축제가 열립니다.
+        축제 기간 동안 공원 전체에 50종 이상의 벚나무 약 2,600그루가 만개하여 매년 약 200만 명의 방문객을 유치합니다.
+    </div>
+
+    <div class="info">
+        <ul>
+            <li class="red">개최 시기</li>
+            <li class="small">4월 말 ~ 5월 초</li>
+
+            <li class="red">개최 지역</li>
+            <li class="small">아오모리</li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="line"></div>
+
+<div class="list_item">
+
+    <h3 class="festival_title">여름 : 도쿄 스미다강 불꽃 축제</h3>
+
+    <div class="festival_img">
+        <img src="img/summer.jpg">
+    </div>
+
+    <div class="festival_text">
+        스미다강 불꽃 축제는 매년 7월 마지막 토요일에 아사쿠사 인근 스미다가와 강 에서 열리는 불꽃놀이 축제입니다 . 스미다강 불꽃 축제는 일본의 전통에 따라 여러 불꽃놀이 단체들이 경쟁하는 축제입니다. 에도 시대 에 열렸던 축제를 되살린 행사 로, 매년 약 백만 명에 가까운 사람들이 축제를 즐깁니다.
+    </div>
+
+    <div class="info">
+        <ul>
+            <li class="red">개최 시기</li>
+            <li class="small">7월 마지막 주</li>
+
+            <li class="red">개최 지역</li>
+            <li class="small">도쿄</li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="line"></div>
+
+<div class="list_item">
+
+    <h3 class="festival_title">가을 : 교토 지다이 마츠리</h3>
+
+    <div class="festival_img">
+        <img src="img/fall.jpg">
+    </div>
+
+    <div class="festival_text">
+        지다이 마츠리는 매년 10월 22일 일본 교토에서 열리는 전통 일본 축제(마쓰리)입니다. 교토의 3대 축제 중 하나이며, 나머지 두 축제는 매년 5월 15일에 열리는 아오이 마쓰리와 매년 7월 17일부터 24일까지 열리는 기온 마쓰리입니다. 이 축제는 모든 연령대의 사람들이 즐기는 축제로, 일본 봉건 시대의 다양한 시대와 인물을 재현하는 의상을 입고 역사 재현 행렬에 참여합니다.
+        지다이 마츠리는 1868년 메이지 유신 당시 일본의 수도가 교토에서 도쿄로 이전되면서 시작되었습니다. 이 시기에 천황และ 황실, 황궁, 그리고 수많은 관료와 백성들이 새로운 도시로 이주해야 했습니다. 교토가 그 위상과 시민들의 관심을 잃을 것을 우려한 교토시와 교토현은 그 역사를 기리기 위해 794년 간무천황(桓武天皇, 737~806)이 헤이안쿄(현재의 교토 이름)를 건립한 지 1100주년을 기념했습니다.
+        1895년 첫 지다이 마쓰리를 개최하기 위해 교토시는 간무천황의 정신을 모시는 헤이안신궁(平安神宮)을 건립했습니다. 축제의 의미를 더하기 위해 교토 역사의 각 시대를 대표하는 인물들을 재현한 의상 행렬을 선보였습니다. 1940년 지방 정부는 간무 천황을 기리는 것 외에도 도쿠가와 막부의 쇠퇴와 에도 시대의 종말에 국가 통일, 황실의 권력 강화, 교토를 일본의 중심지로 확립한 공로를 기리기 위해 고메이 천황(孝明天皇, 1831~1867)을 함께 기리기로 결정했습니다.
+        지다이 마츠리는 이른 아침에 교토 황궁에서 미코시(가마)를 꺼내어 사람들이 참배할 수 있도록 하는 것으로 시작됩니다. 미코시는 간무 천황과 고메이 천황을 모두 상징합니다. 오후에는 5시간 동안 2km에 걸쳐 진행되는 의상 행렬이 시작되는데, 약 2,000명의 공연자들이 초기 시대부터 메이지 시대에 이르기까지 사무라이, 군인, 평민 복장을 하고 행진합니다. 그 뒤를 이어 화려한 십이단복(十二단衣)을 입은 일본 여성들이 행진합니다. 마지막으로, 의상을 입은 군악대가 가가쿠를 연주하며 미코시를 황궁에서 내립니다. 행렬은 헤이안 신사에서 끝납니다.
+    </div>
+
+    <div class="info">
+        <ul>
+            <li class="red">개최 시기</li>
+            <li class="small">10월 22일</li>
+
+            <li class="red">개최 지역</li>
+            <li class="small">교토</li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="line"></div>
+
+<div class="list_item">
+
+    <h3 class="festival_title">겨울 : 삿포로 눈축제</h3>
+
+    <div class="festival_img">
+        <img src="img/winter.jpg">
+    </div>
+
+    <div class="festival_text">
+        삿포로 눈 축제는 매년 2월 7일 동안 일본 삿포로에서 열리는 축제입니다. 오도리 공원, 스스키노, 쓰도메가 축제의 주요 장소입니다.
+        2007년(제57회)에는 약 200만 명이 삿포로를 방문하여 삿포로 중심부의 오도리 공와 스스키노, 그리고 사토랜드에 있는 수백 개의 눈 조각과 얼음 조각을 관람했습니다. 오도리 공원에서는 1974년부터 국제 눈 조각 경연 대회가 개최되어 왔으며, 2008년에는 세계 각지에서 14개 팀이 참가했습니다.
+        조각상의 주제는 다양하며, 종종 전년도의 사건, 유명한 건물 또는 인물을 묘사합니다. 예를 들어, 2004년에는 당시 뉴욕 양키스에서 활약했던 유명 야구 선수 마쓰이 히데키의 조각상이 있었습니다. 눈으로 만든 무대도 여러 곳 설치되어 음악 공연을 비롯한 다양한 행사가 열립니다.
+        사토랜드에서는 긴 눈썰매장과 얼음 미끄럼틀, 그리고 거대한 눈 미로를 즐길 수 있습니다. 또한 오도리 공원과 사토랜드에서는 신선한 해산물, 감자, 옥수수, 유제품 등 홋카이도 각 지역의 다양한 향토 음식을 맛볼 수 있습니다.
+        매년 전시되는 조각상의 총 수는 약 400개입니다. 2007년에는 오도리 공원 부지에 307개, 사토랜드 부지에 32개, 스스키노 부지에 100개의 조각상이 제작되었습니다. 오도리 공원 부지의 TV 타워에서 이 작품들을 잘 볼 수 있습니다.
+    </div>
+
+    <div class="info">
+        <ul>
+            <li class="red">개최 시기</li>
+            <li class="small">2월 초</li>
+
+            <li class="red">개최 지역</li>
+            <li class="small">삿포로</li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="line"></div>
+
+</section>
+
+<footer>
+    JAPAN GUIDE BY 김혁
+</footer>
+
+</body>
+</html>
